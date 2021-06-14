@@ -31,11 +31,22 @@ console.log(
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+
+  counter1 - everything is happening inside the function (closure)
   
+  counter2 - the function need to reach out for information (global)
+
   2. Which of the two uses a closure? How can you tell?
   
+    - counter2. The function is closed in the {} and it stays for itself = private. Can't be reach from outside.
+
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+
+     caunter1 is closure. Used for privacy and important information that should not be easily accessed(protected information).
+     counter2 is global. We can use it when the information inside needs to be accessed from other functions. 
+
+
 */
 
 // counter1 code
@@ -140,8 +151,20 @@ Use the scoreboard function below to do the following:
 ]  
   */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScore, inning, num) {
+  let totalTeam = [];
+  let homeScore = 0;
+  let awayScore = 0;
+  for (i = 0; i < num; i++);
+  const currentScore = inning(getInningScore);
+  homeScore = homeScore + currentScore.Home;
+  awayScore = awayScore + currentScore.Away;
+  totalTeam.push(
+    `Inning ${i + 1}: Away: ${currentScore.Away} - Home: ${currentScore.Home}`
+  );
+  if (homeScore === awayScore)
+    return `This game will require extra innings: ${currentScore.Away} - Home: ${currentScore.Home}`;
+  else return `Final Score: ${currentScore.Away} - Home: ${currentScore.Home} `;
 }
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
