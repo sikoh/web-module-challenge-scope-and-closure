@@ -76,7 +76,7 @@ NOTE: This will be a callback function for the tasks below
 */
 
 function inning() {
-  return Math.ceil(Math.random * 2);
+  return Math.ceil(Math.random() * 2);
 }
 
 /* ⚾️⚾️⚾️ Task 3: finalScore() ⚾️⚾️⚾️
