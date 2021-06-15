@@ -86,7 +86,25 @@ addSix(10); // returns 16
 addSix(21); // returns 27
 ```
 
+function createBase(somenum) {
+return function(boo) {
+return somenum + boo;
+}
+}
+var addSix = createBase(6);
+addSix(10);
+addSix(21);
+
 2. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
+
+Pros of FP - Bugs-Free Code, Efficient Parallel Programming, Better Performance, Better Encaspulation, Supports Nested Functions, Increase Reusability
+
+Cons of FP - Requires Lot of Memory
+-----.-----------.----------.-------------.---------------------.----------------.
+
+Pros of OOP - Easy troubleshooting, Design Benefits, Re-usability
+
+Cons of OOP - It can cause duplication, It can be too scalable, It can be inefficient
 
 ## Resources
 
